@@ -41,6 +41,7 @@ public class FactoryEjemplo {
 
         ReportFactory reportFactory;
 
+
         System.out.println("Ingrese el tipo de reporte que desea: (sales o inventory)");
             String reportType = sn.nextLine();
             reportFactory = switch (reportType) {
@@ -50,9 +51,6 @@ public class FactoryEjemplo {
             };
             reportFactory.generateReport();
         }
-
-
-
 
     }
 }
