@@ -1,4 +1,4 @@
-package com.ru.pattern.builder.computer;
+package com.ru.pattern.builder.computer_example;
 
 public class Computer {
     public String cpu;

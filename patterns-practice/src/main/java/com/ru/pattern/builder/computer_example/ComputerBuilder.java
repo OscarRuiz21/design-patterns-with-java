@@ -1,4 +1,4 @@
-package com.ru.pattern.builder.computer;
+package com.ru.pattern.builder.computer_example;
 
 /**
  * ! Patrón Builder:
