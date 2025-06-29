@@ -6,15 +6,23 @@ public class AbstractFactoryExample {
 
         System.out.println( "Abstract Factory Example");
 
-        System.out.println( "Creating Healty Restaurant");
-        RestaurantFactory factory = new HealtyRestaurant();
-        factory.createBurger().cook();
-        factory.createDrink().pour();
+        System.out.println(".....");
+        System.out.println( "== Creating Healty Restaurant ==");
 
-        System.out.println( "Creating Fast Food Restaurant");
-        RestaurantFactory factory2 = new FastFoodRestaurant();
-        factory2.createBurger().cook();
-        factory2.createDrink().pour();
+        serveMeal(new HealtyRestaurant());
+        System.out.println("Meal served");
+
+        System.out.println(".....");
+        System.out.println( "== Creating Fast Food Restaurant ==");
+
+        serveMeal(new FastFoodRestaurant());
+        System.out.println("Meal served");
+
+    }
+
+    private static void serveMeal(RestaurantFactory restaurantFactory) {
+        restaurantFactory.createBurger().cook();
+        restaurantFactory.createDrink().pour();
     }
 
 }
@@ -86,3 +94,4 @@ class HealtyRestaurant implements RestaurantFactory {
         return new Water();
     }
 }
+
